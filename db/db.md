@@ -50,3 +50,14 @@ Data does not depend on information: however information, depends on data. Data 
 
 # Forms of presentation
 Data typically comes in the form of graphs, number, figures or statics while information is presented through words, language, thoughts and ideas. 
+
+
+# What is Database?
+ Electronic storage - A database is an electronic storage place/system where data is stored in a way that it can be esily accessed, managed and updated. 
+
+ Easy Acccess - Database are structued to ensure data can be esily retrived, updated and managed. 
+ This accessbility is key for efficient data utilization. 
+
+ Efficient Management - Effective database management is crucial for maintaning data integrity, security and availability, ensure data remains reliable. 
+ 
+  
