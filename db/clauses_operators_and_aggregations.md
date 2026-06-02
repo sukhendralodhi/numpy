@@ -28,10 +28,45 @@ WHERE category = 'Electronics'; -->
 <!-- GROUP BY category -->
 <!-- HAVING COUNT(*) > 1; -->
 
+<!-- 
+CREATE TABLE sales (
+    id SERIAL PRIMARY KEY,
+    product_name VARCHAR(50),
+    amount NUMERIC
+);
+
+INSERT INTO sales (product_name, amount)
+VALUES
+('Laptop', 50000),
+('Laptop', 60000),
+('Mouse', 500),
+('Mouse', 700),
+('Keyboard', 1500);
+
+SELECT product_name,
+       SUM(amount) AS total_sales
+FROM sales
+GROUP BY product_name
+HAVING SUM(amount) > 10000;
+ -->
+
 # ORDER BY
+
+<!--  
+SELECT * FROM products ORDER BY price ASC;
+SELECT * FROM products ORDER BY price DESC;
+-->
 
 # LIMIT
 
+<!-- 
+SELECT * FROM products LIMIT 3;
+ -->
+
 # AS
+
+<!-- 
+SELECT name AS item_name, price AS item_price FROM products;
+ -->
 
 # DISTINCT
