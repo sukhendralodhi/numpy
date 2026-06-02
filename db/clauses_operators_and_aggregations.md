@@ -70,3 +70,7 @@ SELECT name AS item_name, price AS item_price FROM products;
  -->
 
 # DISTINCT
+
+<!-- 
+SELECT DISTINCT category FROM products;
+ -->
