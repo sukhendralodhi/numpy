@@ -93,3 +93,31 @@ OR
 SELECT AVG(price) AS avg_price FROM assets;
 
 - this will give you average including all the decimal points 
+
+
+# Question 10
+
+-- Find products between ₹500 and ₹2000
+
+SELECT * FROM assets
+WHERE price BETWEEN 500 AND 2000;
+
+# Question 11
+
+Find categories and their total price
+
+SELECT category, SUM(price) AS total_price FROM assets
+GROUP BY category;
+
+# Question 12
+
+Find categories having total price greater than ₹3000
+
+SELECT category, SUM(price) AS total_price FROM assets
+GROUP BY category HAVING SUM(price) > 3000;
+
+
+# Question 13
+
+Find the second most expensive product
+
