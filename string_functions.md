@@ -46,3 +46,10 @@ SELECT CONCAT(name, ' ', category, ' ', sku_code) AS product_with_category FROM 
 - CONCAT_WS() - here no need to pass ' ' for space that will automatically give space you just mention in fisrt time what do you want between column during concatination
 
 SELECT CONCAT_WS(' ', name, category, sku_code) AS product_with_category FROM products;
+
+
+# TRIM() AND REPLACE()
+
+## TRIM() = This function will remove all the spaces from the string.
+## REPLACE() = This function will replace anything you want
+
