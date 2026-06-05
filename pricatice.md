@@ -56,3 +56,40 @@ Find products with price greater than 1000
 
 SELECT * FROM assets
 WHERE price > 1000;
+
+# Question 7
+
+Find the most expensive product
+
+SELECT * FROM assets
+WHERE price = (SELECT MAX(price) FROM assets);
+
+- here we are using subquery for getting most expensive product
+
+<!-- OR -->
+
+SELECT * FROM assets ORDER BY price DESC LIMIT 1;
+
+- this will give you product that have max amount bcz in desceding order we get larget number order by price so that will order by price and also we set limit 1 so that will retutn only one result
+
+
+# Question 8
+
+- Count products in Electronics category
+
+SELECT COUNT(*) AS total_product_electronics FROM assets
+WHERE category = 'Electronics';
+
+# Question 9
+
+Find average product price
+
+SELECT ROUND(AVG(price), 2) AS avg_price FROM assets;
+
+- this will give you average round of two decimal place
+
+OR
+
+SELECT AVG(price) AS avg_price FROM assets;
+
+- this will give you average including all the decimal points 
