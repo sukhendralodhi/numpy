@@ -97,3 +97,28 @@ ADD CONSTRAINT fk_student_id
 FOREIGN KEY (student_id)
 REFERENCES students(student_id);
 ```
+
+# JOINS
+
+- Joins are used to combine rows from two or more tables based on related columns, usually a primary key in one table and a foreign key in another.
+
+#### "Think of JOINs as bridge between two tables that lets you query them together"
+
+### Why do we use joins?
+
+1. To merge related data spread across multiple tables.
+2. To write meaningful real-world queries like: 
+    - Which student scored highest in science?
+    - List all students even if they haven't appeared for any exam.
+
+## Join Type Description
+
+1. INNER JOIN - Return only matching rows in both table
+
+2. LEFT JOIN - Returns all rows from the left table, even if there's is no match in the right table
+
+3. RIGHT JOIN - Retruns all rows from the right table, even if there's is no match in the left table
+
+4. FULL JOIN - Return all rows from both table, fills null for missing match
+
+5. CROSS JOIN - Returns cartesian product (every combination)
