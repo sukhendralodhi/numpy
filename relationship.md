@@ -48,3 +48,52 @@ students profile table
 ----
 - In a many-to-many relationship, you don't directly connect the two tables using a foreign key.
 - instead, you create a third table (called a junction table) that breaks the many-to-many into to one-to-many relationships.
+---
+## One To One Example
+
+Now both the table have been created and we can clearly see there is a similar column and that is student_id but currently there is no relationship setup between them for setting them uo you have to create a foreign key in the 2nd table.
+
+- primary key -> Unique indentify each row in a table.
+- foriegn key -> Links one table to another by refrence to the Primary Key of that table.
+
+``` sql
+CREATE TABLE students (
+	student_id SERIAL PRIMARY KEY,
+	name VARCHAR(100) NOT NULL
+);
+```
+
+``` sql
+INSERT INTO students (name)
+VALUES ('Sukhendra Lodhi'),
+('Mohan Gupta'),
+('Komal Sharma'),
+('Arpita Patidar'),
+('Sardar Banshkar');
+```
+
+```sql
+CREATE TABLE student_profiles (
+	student_id INT PRIMARY KEY,
+	address TEXT,
+	age INT,
+	phone VARCHAR(15)
+);
+```
+
+```sql
+INSERT INTO student_profiles (student_id, address, age, phone)
+VALUES
+(1, 'Indore, India', 27, '9522543648'),
+(2, 'Jabalpur, India', 22, '7800657456'),
+(3, 'Gwalior, India', 24, '8755678954'),
+(4, 'Dewas, India', 25, '6577564567'),
+(5, 'Shivpuri India', 29, '7694963212');
+```
+
+```sql
+ALTER TABLE student_profiles
+ADD CONSTRAINT fk_student_id
+FOREIGN KEY (student_id)
+REFERENCES students(student_id);
+```
