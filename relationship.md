@@ -122,3 +122,46 @@ REFERENCES students(student_id);
 4. FULL JOIN - Return all rows from both table, fills null for missing match
 
 5. CROSS JOIN - Returns cartesian product (every combination)
+
+---
+
+### INNER JOIN SYNTAX
+
+```sql
+SELECT columns
+    FROM table1
+    JOIN table2
+ON table1.common_column = table2.commo_column
+```
+
+### JOIN EXAMPLE:
+
+#### How INNER JOIN works:
+It returns only the rows where the condition matches in both tables.
+
+```sql
+SELECT s.name, m.subject, m.marks FROM students s 
+JOIN marks m
+ON s.student_id = m.student_id;
+```
+
+- tIt returns only the rows where the condition matches in both tables.
+
+```sql
+SELECT s.name, m.subject, m.marks FROM students s 
+JOIN marks m
+ON s.student_id = m.student_id
+WHERE s.name = 'Sukhendra Lodhi';
+```
+
+# IMPORTANT QUSETION
+
+Show numbers orders placed for each products.
+
+```sql
+SELECT p.product_name, COUNT(o.order_id) AS total_orders
+FROM products p
+LEFT JOIN orders o
+ON p.product_id = o.product_id
+GROUP BY p.product_name;
+```
